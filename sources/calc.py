@@ -1,4 +1,3 @@
-# test trigger jenkins
 '''
 The 'calc' library contains the 'add2' function that takes 2 values and adds
 them together. If either value is a string (or both of them are) 'add2' ensures

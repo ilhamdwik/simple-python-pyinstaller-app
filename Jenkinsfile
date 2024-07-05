@@ -30,7 +30,8 @@ pipeline {
             agent {
                 docker {
                     //image 'cdrx/pyinstaller-linux:python2'
-                    image 'python:3.9'
+                    image 'python:3.8.10'
+                    args '-u root'
                 }
             }
             steps {
