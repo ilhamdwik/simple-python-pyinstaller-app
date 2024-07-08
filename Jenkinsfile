@@ -16,10 +16,15 @@ node {
         }
     }
     
-    stage('Deliver') {
+    stage('Manual Approval') {
+        input "Lanjutkan ke tahap Deploy?"
+    }
+
+    stage('Deploy') {
         docker.image('python:3.8.10').inside('-u root') {
             sh 'pip install pyinstaller && pyinstaller --onefile sources/add2vals.py'
             archiveArtifacts 'dist/add2vals'
+            sleep 60
         }
     }
 }
